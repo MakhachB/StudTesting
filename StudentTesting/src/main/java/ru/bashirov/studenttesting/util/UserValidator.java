@@ -41,7 +41,6 @@ public class UserValidator implements Validator {
                 UserDetails findUserByEmail = userDetailService.loadUserByEmail(user.getEmail());
                 errors.rejectValue("email", "", "Эта почта уже занята");
             } catch (UsernameNotFoundException ignored2) {
-                return;
             }
         }
     }
